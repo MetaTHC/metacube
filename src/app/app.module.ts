@@ -1,18 +1,32 @@
+import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { appRoutes } from "./app.routing";
+import {CoreModule} from "../settings/core/core.module";
+import {ThemeModule} from "../settings/theme/theme.module";
 
+const routerConfig: ExtraOptions = {
+  preloadingStrategy: PreloadAllModules,
+  scrollPositionRestoration: 'enabled',
+  initialNavigation: 'enabledBlocking',
+  anchorScrolling: 'enabled',
+  enableTracing: false,
+  onSameUrlNavigation: 'reload'
+};
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes, routerConfig),
+    CoreModule,
+    ThemeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
