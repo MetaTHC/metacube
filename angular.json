@@ -31,9 +31,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/styles/tailwindcss.scss",
+              "src/assets/styles/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "dev": {
@@ -139,7 +144,8 @@
             "inlineStyleLanguage": "scss",
             "scripts": [],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/tailwindcss.scss",
+              "src/assets/styles/styles.scss"
             ],
             "assets": [
               "src/favicon.ico",
