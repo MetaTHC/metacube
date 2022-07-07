@@ -1,1 +1,21 @@
-<p>header works!</p>
+<nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-gray-900">
+  <div class="container">
+    <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
+      <span><img src="./assets/images/logo/logo.png" alt="logo" class="logo-header"></span>
+    </a>
+    <div class="navbar-collapse collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/" (click)="collapseNavbar()">
+            <span><span>Download</span></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/login" (click)="collapseNavbar()">
+            <span><span>Login</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

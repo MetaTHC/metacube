@@ -7,6 +7,8 @@ import {
   ToolbarComponent,
   UserbarComponent
 } from './components';
+import { LayoutComponent } from "./layout/layout.component";
+import {RouterModule} from "@angular/router";
 
 
 const appComponents = [
@@ -15,14 +17,17 @@ const appComponents = [
   NavbarComponent,
   ToolbarComponent,
   UserbarComponent,
-]
-const appModules = []
-const appPipes = []
+];
+const appLayout = [
+  LayoutComponent,
+];
+const appModules = [];
+const appPipes = [];
 
 @NgModule({
-  imports: [CommonModule],
-  exports: [CommonModule, ...appComponents],
+  imports: [CommonModule, RouterModule],
+  exports: [CommonModule, ...appComponents, ...appLayout],
   providers: [],
-  declarations: [...appComponents],
+  declarations: [...appComponents, ...appLayout],
 })
 export class ThemeModule { }

@@ -5,8 +5,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { appRoutes } from "./app.routing";
-import {CoreModule} from "../settings/core/core.module";
-import {ThemeModule} from "../settings/theme/theme.module";
+import { CoreModule } from "../settings/core/core.module";
+import { ThemeModule } from "../settings/theme/theme.module";
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy: PreloadAllModules,
