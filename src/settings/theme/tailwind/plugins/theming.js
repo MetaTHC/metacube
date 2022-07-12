@@ -110,7 +110,10 @@ const theming = plugin.withOptions((options) => ({
                     ],
                     [
                         `on-${e(paletteName)}`,
-                        _.fromPairs(_.map(generateContrasts(palette), (color, hue) => [hue, _.get(theme, [`on-${paletteName}`, hue]) || color]))
+                        _.fromPairs(_.map(generateContrasts(palette), (color, hue) => [hue, _.get({
+                            endpoint: theme,
+                            options: [`on-${paletteName}`, hue]
+                        }) || color]))
                     ]
                 ])
             ))), (value, key) => [[`--fuse-${e(key)}`, value], [`--fuse-${e(key)}-rgb`, chroma(value).rgb().join(',')]])))

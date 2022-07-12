@@ -10,7 +10,7 @@ export const appRoutes: Route[] = [
     ]
   },
   { path: '',
-    component: LayoutComponent,
+    // component: LayoutComponent,
     data: { layout: 'default' },
     children: [
       { path: 'login', loadChildren: () => import('../settings/security/assets/login/login.module').then(m => m.LoginModule) },

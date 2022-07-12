@@ -50,8 +50,11 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles/vendors.scss",
-              "src/assets/styles/tailwindcss.scss",
-              "src/assets/styles/styles.scss"
+              "src/settings/theme/styles/tailwind.scss",
+              "src/settings/theme/styles/themes.scss",
+              "src/settings/theme/styles/main.scss",
+              "src/assets/styles/styles.scss",
+              "src/assets/styles/tailwindcss.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -118,7 +121,7 @@
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.web.ts"
                 }
-              ],
+              ]
             },
             "web-production": {
               "optimization": true,

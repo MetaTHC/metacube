@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { appRoutes } from "./app.routing";
 import { CoreModule } from "../settings/core/core.module";
 import { ThemeModule } from "../settings/theme/theme.module";
+import {HttpService} from "../settings/core/services/http.service";
 
 const routerConfig: ExtraOptions = {
   preloadingStrategy: PreloadAllModules,
@@ -28,7 +29,7 @@ const routerConfig: ExtraOptions = {
     CoreModule,
     ThemeModule,
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

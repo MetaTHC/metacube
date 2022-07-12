@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   template: `
-    <body class="holy-grail bg-gray-800">
+    <body class="holy-grail">
     <header class="static">
       <meta-header></meta-header>
     </header>
@@ -11,7 +11,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
         <router-outlet *ngIf="true"></router-outlet>
       </section>
     </div>
-    <footer class="bg-gray-900">
+    <footer class="">
       <meta-footer></meta-footer>
     </footer>
     </body>
